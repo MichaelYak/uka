@@ -6,15 +6,16 @@
 </head>
 <body>
 
-<c:choose>
-    <c:when test="${not empty deletedId}">
-        Successfully deleted document. ID: <c:out value="${deletedId}"/>
-    </c:when>
-    <c:otherwise>
-        Failed to delete document from database.
-    </c:otherwise>
-</c:choose>
-
+<div id="message">
+    <c:choose>
+        <c:when test="${not empty deletedId}">
+            Successfully deleted document. ID: <c:out value="${deletedId}"/>
+        </c:when>
+        <c:otherwise>
+            Failed to delete document from database.
+        </c:otherwise>
+    </c:choose>
+</div>
 <br>
 <br>
 

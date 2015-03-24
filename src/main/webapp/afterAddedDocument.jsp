@@ -6,15 +6,16 @@
 </head>
 <body>
 
-<c:choose>
-    <c:when test="${not empty docId}">
-        Successfully adde document to database. ID: <c:out value="${docId}"/>
-    </c:when>
-    <c:otherwise>
-        Failed to add document to database.
-    </c:otherwise>
-</c:choose>
-
+<div id="message">
+    <c:choose>
+        <c:when test="${not empty docId}">
+            Successfully adde document to database. ID: <c:out value="${docId}"/>
+        </c:when>
+        <c:otherwise>
+            Failed to add document to database.
+        </c:otherwise>
+    </c:choose>
+</div>
 <br>
 <br>
 

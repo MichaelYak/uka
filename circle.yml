@@ -12,9 +12,8 @@ dependencies:
 
 
 deployment:
-  hub:
+  elasticbeanstalk:
     branch: master
     commands:
-
-      - docker login -e $kim.flaethe@accenture.com -u manlulu -p $DOCKER_PASS
-      - docker push manlulu/circle
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - ./deploy.sh $CIRCLE_SHA1

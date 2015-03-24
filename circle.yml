@@ -12,12 +12,8 @@ dependencies:
 
 
 deployment:
-  hub:
+  staging:
     branch: master
-    commands:
-
-      - docker login -e $kim.flaethe@accenture.com -u manlulu -p $DOCKER_PASS
-      - docker push manlulu/circle
     codedeploy:
       appname-1234:
         application_root: /

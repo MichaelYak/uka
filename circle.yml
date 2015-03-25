@@ -8,10 +8,14 @@ dependencies:
   - mvn clean install
   post:
   - docker build -t manlulu/circle .
-  
 
 
 deployment:
+  stagning:
+    branch: master
+    codedeploy:
+      uka2015:
+        deployment_group: my-deployment-group
   hub:
     branch: master
     commands:

@@ -9,7 +9,10 @@
 <div id="message">
     <c:choose>
         <c:when test="${not empty deletedId}">
-            Successfully deleted document. ID: <c:out value="${deletedId}"/>
+            Successfully deleted document. ID: <c:out value="${deletedId}"/><br>
+            <br>
+            Documents in database before deleting: <c:out value="${countBefore}"/><br>
+            Documents in database after deleting : <c:out value="${countAfter}"/>
         </c:when>
         <c:otherwise>
             Failed to delete document from database.

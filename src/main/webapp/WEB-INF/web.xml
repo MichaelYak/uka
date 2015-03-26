@@ -13,6 +13,10 @@
         <servlet-name>DeleteServlet</servlet-name>
         <servlet-class>Servlet.DeleteServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>MiscServlet</servlet-name>
+        <servlet-class>Servlet.MiscServlet</servlet-class>
+    </servlet>
 
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
@@ -21,6 +25,10 @@
     <servlet-mapping>
         <servlet-name>DeleteServlet</servlet-name>
         <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MiscServlet</servlet-name>
+        <url-pattern>/MiscServlet</url-pattern>
     </servlet-mapping>
 
 </web-app>

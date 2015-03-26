@@ -11,11 +11,6 @@ dependencies:
 
 
 deployment:
-  stagning:
-    branch: master
-    codedeploy:
-      uka2015:
-        deployment_group: my-deployment-group
   hub:
     branch: master
     commands:

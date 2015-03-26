@@ -1,0 +1,13 @@
+[global]
+ApplicationName=test-app
+AwsCredentialFile=c:/Users/kim.flaethe\.elasticbeanstalk\aws_credential_file
+DevToolsEndpoint=git.elasticbeanstalk.ap-southeast-2.amazonaws.com
+EnvironmentName=test-app-env
+EnvironmentTier=WebServer::Standard::1.0
+EnvironmentType=LoadBalanced
+InstanceProfileName=aws-elasticbeanstalk-ec2-role
+OptionSettingFile=c:\Users\kim.flaethe\Desktop\Nykode\.elasticbeanstalk\optionsettings.test-app-env
+RdsEnabled=No
+Region=ap-southeast-2
+ServiceEndpoint=https://elasticbeanstalk.ap-southeast-2.amazonaws.com
+SolutionStack=64bit Amazon Linux 2014.09 v1.2.1 running Docker 1.5.0

@@ -53,15 +53,15 @@ public class DatabaseControllerTest {
         assertEquals(jsonObject.get("appname").getAsString(), "simple-app");
         dbClient.remove(jsonObject);
     }
-
+ */
     @Test
     public void removeFromDatabase(){
-        databaseController.addToDatabase(dbClient, new DummyData());
+        Response r = databaseController.addToDatabase(new DummyData());
 
         List<DummyData> allDocs = dbClient.view("_all_docs").includeDocs(true).query(DummyData.class);
 
         int countBefore = dbClient.view("_all_docs").query(DummyData.class).size();
-        databaseController.removeDocument(dbClient, allDocs.get(allDocs.size() - 1).get_id());
+        databaseController.removeDocument(r.getId());
         int countAfter = dbClient.view("_all_docs").query(DummyData.class).size();
 
         assertTrue(countBefore == countAfter + 1);
@@ -69,8 +69,8 @@ public class DatabaseControllerTest {
 
     @Test
     public void addDataToDatabase() {
-        Response r = databaseController.addToDatabase(dbClient, new DummyData());
+        Response r = databaseController.addToDatabase(new DummyData());
         assertTrue(r.getId().length() > 0);
     }
-    */
+
 }

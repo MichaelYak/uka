@@ -16,26 +16,32 @@ public class DummyData {
     private Random random;
 
     public DummyData() {
-        data = "Some data";
-        name = "SomeName";
+        data = "This is some data";
+        name = "This is a name";
     }
 
     public String getData() {
         return data;
     }
+    public void setData(String data){
+        this.data = data;
+    }
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
 
     public String get_id() {
         return _id;
     }
-
     public void set_id(String _id) {
         this._id = _id;
     }
-
     public String get_rev() {
         return _rev;
     }
-
     public void set_rev(String _rev) {
         this._rev = _rev;
     }

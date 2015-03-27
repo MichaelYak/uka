@@ -53,7 +53,7 @@ public class DatabaseControllerTest {
         assertEquals(jsonObject.get("appname").getAsString(), "simple-app");
         dbClient.remove(jsonObject);
     }
- */
+
     @Test
     public void removeFromDatabase(){
         Response r = databaseController.addToDatabase(new DummyData());
@@ -66,7 +66,7 @@ public class DatabaseControllerTest {
 
         assertTrue(countBefore == countAfter + 1);
     }
-
+ */
     @Test
     public void addDataToDatabase() {
         Response r = databaseController.addToDatabase(new DummyData());

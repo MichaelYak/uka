@@ -17,4 +17,4 @@ deployment:
 
       - docker login -e $kim.flaethe@accenture.com -u manlulu -p $DOCKER_PASS
       - docker push manlulu/circle
-      - deploy.sh
+      - bash deploy.sh

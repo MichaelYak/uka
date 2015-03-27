@@ -4,7 +4,7 @@ aws configure set default.region us-west-2
 aws configure set default.output json
 APPNAME="lastappagain"
 
-zip -r ${CIRCLE_SHA1}.zip Dockerfile ./target/testmaven-maven.war
+zip -r ${CIRCLE_SHA1}.zip Dockerrun.aws.json
 aws s3 cp ${CIRCLE_SHA1}.zip s3://$my_bucket/
 aws elasticbeanstalk create-application-version --application-name $APPNAME --version-label $CIRCLE_SHA1\
     --description "My first elasticbeanstalk app in Docker container"\

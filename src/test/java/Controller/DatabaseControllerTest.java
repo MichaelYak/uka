@@ -53,7 +53,7 @@ public class DatabaseControllerTest {
         assertEquals(jsonObject.get("appname").getAsString(), "simple-app");
         dbClient.remove(jsonObject);
     }
-*/
+
     @Test
     public void removeFromDatabase(){
         databaseController.addToDatabase(dbClient, new DummyData());
@@ -72,4 +72,5 @@ public class DatabaseControllerTest {
         Response r = databaseController.addToDatabase(dbClient, new DummyData());
         assertTrue(r.getId().length() > 0);
     }
+    */
 }

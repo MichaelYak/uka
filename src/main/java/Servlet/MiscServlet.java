@@ -3,6 +3,7 @@ package Servlet;
 import Controller.DatabaseController;
 import Controller.DatabaseSetup;
 import Entity.DummyData;
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.lightcouch.CouchDbClient;
@@ -13,7 +14,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 
 /**
@@ -21,23 +21,25 @@ import java.util.List;
  */
 public class MiscServlet extends HttpServlet {
 
-    private CouchDbClient dbClient;
-    private DatabaseController dbController;
+
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        dbClient = DatabaseSetup.getDbCliend();
-        dbController = new DatabaseController();
 
-        List<DummyData> allDocs = dbClient.view("_all_docs").includeDocs(true).query(DummyData.class);
+        DatabaseController databaseController = new DatabaseController();
+        List <DummyData> allDocs = databaseController.getAllDocuments();
 
         // Format Json output
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-        String listOutput = mapper.writeValueAsString(allDocs);
+        String listOutput = formatJsonString(allDocs);
 
         request.setAttribute("listOutput", listOutput);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("listDocuments.jsp");
         dispatcher.forward(request, response);
+    }
+
+    private String formatJsonString(List<DummyData> allDocs) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        return mapper.writeValueAsString(allDocs);
     }
 }

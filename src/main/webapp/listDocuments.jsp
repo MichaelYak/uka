@@ -18,7 +18,7 @@ Database : <br>
     <c:choose>
         <c:when test="${not empty listOutput}">
 
-                <pre><c:out value="${listOutput}"/></pre>
+            <pre><c:out value="${listOutput}"/></pre>
 
             <br>
         </c:when>

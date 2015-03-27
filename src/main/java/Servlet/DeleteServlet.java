@@ -18,31 +18,18 @@ public class DeleteServlet extends HttpServlet {
     public DeleteServlet() {
     }
 
-    private CouchDbClient dbClient;
     private DatabaseController dbController;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
 
-        dbClient = DatabaseSetup.getDbCliend();
 
         dbController = new DatabaseController();
 
         try {
-            int countBefore;
-            int countAfter;
-            try {
-                countBefore = dbClient.view("_all_docs").query(DummyData.class).size();
-            } catch (Exception e) {
-                countBefore = 0;
-            }
-            Response resp = dbController.removeDocument(dbClient, id);
-
-            try {
-                countAfter = dbClient.view("_all_docs").query(DummyData.class).size();
-            } catch (Exception e) {
-                countAfter = 0;
-            }
+            int countBefore = dbController.countDatabase();
+            Response resp = dbController.removeDocument(id);
+            int countAfter = dbController.countDatabase();
 
             String deletedId = resp.getId();
             request.setAttribute("countBefore", countBefore);
@@ -53,4 +40,5 @@ public class DeleteServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("afterDeletedDocument.jsp");
         dispatcher.forward(request, response);
     }
+
 }

@@ -7,6 +7,8 @@ import org.lightcouch.CouchDbClient;
 import org.lightcouch.CouchDbProperties;
 import org.lightcouch.Response;
 
+import java.util.List;
+
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
 
@@ -29,6 +31,8 @@ public class DatabaseControllerTest {
                 .setMaxConnections(100)
                 .setConnectionTimeout(0);
         dbClient = new CouchDbClient(properties);
+
+        databaseController = new DatabaseController();
     }
 
     // Skreiv om koden til delete, så måtte kommentere ut testene før visning.
@@ -51,41 +55,21 @@ public class DatabaseControllerTest {
     }
 */
     @Test
-    public void addAndRemoveFromDatabase() {
+    public void removeFromDatabase(){
+        databaseController.addToDatabase(dbClient, new DummyData());
 
-        //Adding data to database
-        dbClient = DatabaseSetup.getDbCliend();
-        databaseController = new DatabaseController();
-        String id = "";
-        DummyData dummyData = null;
-        try {
-            id = databaseController.addToDatabase(dbClient).getId();
-            dummyData = dbClient.find(DummyData.class, id);
-        } catch (Exception e) {
-            fail("Could not add data to database");
-        }
+        List<DummyData> allDocs = dbClient.view("_all_docs").includeDocs(true).query(DummyData.class);
 
-        // Looking for the data in the database.
-        assertEquals(dummyData.get_id(), id);
-        DummyData deletedObject = null;
+        int countBefore = dbClient.view("_all_docs").query(DummyData.class).size();
+        databaseController.removeDocument(dbClient, allDocs.get(allDocs.size() - 1).get_id());
+        int countAfter = dbClient.view("_all_docs").query(DummyData.class).size();
 
-        //Deleting the data from the database
-        try {
-            databaseController.removeDocument(dbClient, id);
-            // Trying to find the deleted object.
-            deletedObject = dbClient.find(DummyData.class, id);
-            assertThat("The object created for the test was not deleted.", deletedObject, is(notNullValue()));
-        } catch (Exception e) {
-            assertThat(deletedObject, is(nullValue()));
-        }
+        assertTrue(countBefore == countAfter + 1);
     }
 
     @Test
     public void addDataToDatabase() {
-        dbClient = DatabaseSetup.getDbCliend();
-        databaseController = new DatabaseController();
-
-        Response r = databaseController.addToDatabase(dbClient);
+        Response r = databaseController.addToDatabase(dbClient, new DummyData());
         assertTrue(r.getId().length() > 0);
     }
 }

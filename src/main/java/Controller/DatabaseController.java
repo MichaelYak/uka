@@ -5,6 +5,8 @@ import com.google.gson.JsonObject;
 import org.lightcouch.CouchDbClient;
 import org.lightcouch.Response;
 
+import javax.xml.crypto.Data;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -13,9 +15,13 @@ import java.util.Random;
 public class DatabaseController {
 
     private int number;
-    private DummyData dummyData;
+    private CouchDbClient dbClient;
 
-    public Response addToDatabase(CouchDbClient dbClient) {
+    public DatabaseController () {
+        dbClient = new DatabaseSetup().getDbClient();
+    }
+
+    public Response addToDatabase(DummyData dummyData) {
         Random rand = new Random();
         number = rand.nextInt((1000) + 1);
         dummyData = new DummyData();
@@ -26,11 +32,22 @@ public class DatabaseController {
         return dbClient.save(jsonObject);
     }
 
-    public Response removeDocument(CouchDbClient dbClient, String id) {
-
-        dummyData = new DummyData();
-        dummyData = dbClient.find(DummyData.class, id);
-
+    public Response removeDocument(String id) {
+        DummyData dummyData = dbClient.find(DummyData.class, id);
         return dbClient.remove(dummyData);
+    }
+
+    public List<DummyData> getAllDocuments(){
+        return dbClient.view("_all_docs").includeDocs(true).query(DummyData.class);
+    }
+
+    public int countDatabase() {
+        int countBefore;
+        try {
+            countBefore = dbClient.view("_all_docs").query(DummyData.class).size();
+        } catch (Exception e) {
+            countBefore = 0;
+        }
+        return countBefore;
     }
 }

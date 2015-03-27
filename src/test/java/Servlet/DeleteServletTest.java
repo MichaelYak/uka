@@ -5,13 +5,10 @@ import Controller.DatabaseSetup;
 import org.junit.Before;
 import org.junit.Test;
 import org.lightcouch.CouchDbClient;
-import org.lightcouch.Response;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import static org.hamcrest.Matchers.*;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 /**
@@ -37,7 +34,7 @@ public class DeleteServletTest {
     public void doGetTest(){
         when(request.getParameter(anyString())).thenReturn(anyString());
 
-        dbClient = DatabaseSetup.getDbCliend();
+        dbClient = DatabaseSetup.getDbClient();
 
         dbController = new DatabaseController();
 

@@ -12,33 +12,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class UploadServlet extends HttpServlet {
 
     public UploadServlet() {
+        super();
     }
 
-    private CouchDbClient dbClient;
-    private DatabaseController dbController;
+    DatabaseController dbController;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        dbClient = DatabaseSetup.getDbCliend();
         dbController = new DatabaseController();
-        int countBefore;
-        try {
-            countBefore = dbClient.view("_all_docs").query(DummyData.class).size();
-        } catch (Exception e){
-            countBefore = 0;
-        }
-        Response resp = dbController.addToDatabase(dbClient);
 
-        int countAfter;
-        try {
-            countAfter = dbClient.view("_all_docs").query(DummyData.class).size();
-        } catch (Exception e){
-            countAfter = 0;
-        }
+        int countBefore = dbController.countDatabase();
+        Response resp = dbController.addToDatabase(new DummyData());
+        int countAfter = dbController.countDatabase();
+
         String docId = resp.getId();
         request.setAttribute("countBefore", countBefore);
         request.setAttribute("countAfter", countAfter);
@@ -47,4 +36,6 @@ public class UploadServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("afterAddedDocument.jsp");
         dispatcher.forward(request, response);
     }
+
+
 }

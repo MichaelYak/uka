@@ -8,11 +8,11 @@ import org.lightcouch.CouchDbProperties;
  */
 public class DatabaseSetup {
 
-    private static CouchDbClient dbClient;
-    private static final String TESTDB = "uka";
+    private CouchDbClient dbClient;
+    private final String TESTDB = "uka";
 
 
-    public static CouchDbClient getDbCliend() {
+    public CouchDbClient getDbClient() {
 
         CouchDbProperties properties = new CouchDbProperties()
                 .setDbName(TESTDB)
@@ -26,5 +26,4 @@ public class DatabaseSetup {
                 .setConnectionTimeout(0);
         return dbClient = new CouchDbClient(properties);
     }
-
 }

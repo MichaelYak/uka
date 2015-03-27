@@ -5,10 +5,9 @@ import Controller.DatabaseSetup;
 import Entity.DummyData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
-import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import org.lightcouch.CouchDbClient;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,21 +28,16 @@ public class MiscServlet extends HttpServlet {
         dbClient = DatabaseSetup.getDbCliend();
         dbController = new DatabaseController();
 
-        PrintWriter out = response.getWriter();
-        out.println("I MiscServlet");
-        String getParam = request.getParameter("listdb");
-
-
         List<DummyData> allDocs = dbClient.view("_all_docs").includeDocs(true).query(DummyData.class);
 
+        // Format Json output
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-        String output = mapper.writeValueAsString(allDocs);
+        String listOutput = mapper.writeValueAsString(allDocs);
 
-     //   JsonObject jsonObject = new JsonObject();
-     //   jsonObject.add("items", new Gson().toJsonTree(allDocs).getAsJsonArray());
+        request.setAttribute("listOutput", listOutput);
 
-    //    out.println("JSONOBJECT ->");
-        out.println(output);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("listDocuments.jsp");
+        dispatcher.forward(request, response);
     }
 }

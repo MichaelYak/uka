@@ -21,8 +21,8 @@ public class DatabaseController {
         dummyData = new DummyData();
 
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("Some data", dummyData.getData());
-        jsonObject.addProperty("A name", dummyData.getName());
+        jsonObject.addProperty("Data", dummyData.getData());
+        jsonObject.addProperty("Name", dummyData.getName());
         return dbClient.save(jsonObject);
     }
 

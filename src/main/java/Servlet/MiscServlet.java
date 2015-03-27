@@ -3,6 +3,8 @@ package Servlet;
 import Controller.DatabaseController;
 import Controller.DatabaseSetup;
 import Entity.DummyData;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import org.lightcouch.CouchDbClient;
@@ -34,10 +36,14 @@ public class MiscServlet extends HttpServlet {
 
         List<DummyData> allDocs = dbClient.view("_all_docs").includeDocs(true).query(DummyData.class);
 
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.add("items", new Gson().toJsonTree(allDocs).getAsJsonArray());
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        String output = mapper.writeValueAsString(allDocs);
 
-        out.println("JSONOBJECT ->");
-        out.println(jsonObject);
+     //   JsonObject jsonObject = new JsonObject();
+     //   jsonObject.add("items", new Gson().toJsonTree(allDocs).getAsJsonArray());
+
+    //    out.println("JSONOBJECT ->");
+        out.println(output);
     }
 }

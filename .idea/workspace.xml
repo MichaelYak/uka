@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bcc8d2bd-afc8-4c59-a7dd-fa7f3206558c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java" />
-    </list>
+    <list default="true" id="bcc8d2bd-afc8-4c59-a7dd-fa7f3206558c" name="Default" comment="" />
     <ignored path="TestMaven.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -964,12 +962,12 @@
       <workItem from="1427449509172" duration="100000" />
       <workItem from="1427449658288" duration="1583000" />
       <workItem from="1427452892526" duration="1197000" />
-      <workItem from="1427454787977" duration="833000" />
+      <workItem from="1427454787977" duration="1421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71091000" />
+    <option name="totallyTimeSpent" value="71679000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">

@@ -1,10 +1,10 @@
 package Servlet;
 
 import Controller.DatabaseController;
-import Controller.DatabaseSetup;
 import org.junit.Before;
 import org.junit.Test;
 import org.lightcouch.CouchDbClient;
+import org.lightcouch.Response;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,29 +16,27 @@ import static org.mockito.Mockito.*;
  */
 public class DeleteServletTest {
 
-    private CouchDbClient dbClient;
-    private DatabaseController dbController;
-    private HttpServletResponse response;
-    private HttpServletRequest request;
+    private CouchDbClient dbClientMock;
+    private DatabaseController dbControllerMock;
+    private HttpServletResponse responseMock;
+    private HttpServletRequest requestMock;
+    private Response responseLightCouchMock;
 
     @Before
     public void setUp(){
-        dbClient = mock(CouchDbClient.class);
-        dbController = mock(DatabaseController.class);
-        response = mock(HttpServletResponse.class);
-        request = mock(HttpServletRequest.class);
+        dbClientMock = mock(CouchDbClient.class);
+        dbControllerMock = mock(DatabaseController.class);
+        responseMock = mock(HttpServletResponse.class);
+        requestMock = mock(HttpServletRequest.class);
+        responseLightCouchMock = mock(Response.class);
     }
 
-/*
+
     @Test
     public void doGetTest(){
-        when(request.getParameter(anyString())).thenReturn(anyString());
-
-        dbClient = DatabaseSetup.getDbClient();
-
-        dbController = new DatabaseController();
-
+        when(requestMock.getParameter(anyString())).thenReturn(anyString());
+  //      when(dbControllerMock.countDatabase()).thenReturn(anyInt());
+  //      when(dbControllerMock.removeDocument(anyString())).thenReturn(responseLightCouchMock);
 
     }
-*/
 }

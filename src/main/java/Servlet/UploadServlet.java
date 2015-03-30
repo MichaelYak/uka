@@ -36,6 +36,4 @@ public class UploadServlet extends HttpServlet {
         RequestDispatcher dispatcher = request.getRequestDispatcher("afterAddedDocument.jsp");
         dispatcher.forward(request, response);
     }
-
-
 }

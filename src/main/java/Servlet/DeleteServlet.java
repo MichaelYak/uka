@@ -1,9 +1,6 @@
 package Servlet;
 
 import Controller.DatabaseController;
-import Controller.DatabaseSetup;
-import Entity.DummyData;
-import org.lightcouch.CouchDbClient;
 import org.lightcouch.Response;
 
 import javax.servlet.RequestDispatcher;
@@ -22,7 +19,6 @@ public class DeleteServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
-
 
         dbController = new DatabaseController();
 

@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcc8d2bd-afc8-4c59-a7dd-fa7f3206558c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java" afterPath="$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlet/DeleteServlet.java" afterPath="$PROJECT_DIR$/src/main/java/Servlet/DeleteServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/Servlet/DeleteServletTest.java" afterPath="$PROJECT_DIR$/src/test/java/Servlet/DeleteServletTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Dockerrun.aws.json" afterPath="$PROJECT_DIR$/Dockerrun.aws.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/Servlet/UploadServlet.java" afterPath="$PROJECT_DIR$/src/main/java/Servlet/UploadServlet.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TestMaven.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,75 +35,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="UploadServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/UploadServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="612">
-              <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-              <folding>
-                <element signature="e#501#502#0" expanded="true" />
-                <element signature="e#524#525#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UploadServletTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Servlet/UploadServletTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="561">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteServletTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Servlet/DeleteServletTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="697">
-              <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MiscServlet.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/MiscServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="629">
-              <caret line="28" column="32" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DeleteServlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/DeleteServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="663">
-              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="629">
+              <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DatabaseControllerTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java">
+      <file leaf-file-name="DeleteServletTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/Servlet/DeleteServletTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2267658" vertical-offset="690" max-vertical-offset="1275">
-              <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DatabaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="850">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="1.2986578" vertical-offset="208" max-vertical-offset="816">
+              <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,14 +93,14 @@
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
         <option value="$PROJECT_DIR$/src/main/java/Entity/DummyData.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/listDocuments.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/Servlet/UploadServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/DatabaseSetup.java" />
         <option value="$PROJECT_DIR$/src/test/java/Servlet/UploadServletTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Servlet/MiscServlet.java" />
+        <option value="$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Servlet/UploadServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/Servlet/DeleteServlet.java" />
         <option value="$PROJECT_DIR$/src/test/java/Servlet/DeleteServletTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java" />
       </list>
     </option>
   </component>
@@ -200,6 +155,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -368,8 +325,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -393,6 +348,7 @@
     <property name="LayoutCode.rearrangeEntriesJava" value="false" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
     <property name="LayoutCode.rearrangeEntriesJSP" value="false" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -520,7 +476,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="UploadServletTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="DeleteServletTest.doGetTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="Servlet.*" />
@@ -531,9 +487,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="Servlet" />
-      <option name="MAIN_CLASS_NAME" value="Servlet.UploadServletTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="Servlet.DeleteServletTest" />
+      <option name="METHOD_NAME" value="doGetTest" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -887,15 +843,15 @@
       <item index="2" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest.removeFromDatabase" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest" />
       <item index="4" class="java.lang.String" itemvalue="JUnit.UploadServletTest.doGet" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.UploadServletTest" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.DeleteServletTest.doGetTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest.removeFromDatabase" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest.addDataToDatabase" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.UploadServletTest.doGet" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.UploadServletTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.DeleteServletTest.doGetTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest.removeFromDatabase" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest.addDataToDatabase" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.DatabaseControllerTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.UploadServletTest.doGet" />
       </list>
     </recent_temporary>
   </component>
@@ -965,12 +921,15 @@
       <workItem from="1427449658288" duration="1583000" />
       <workItem from="1427452892526" duration="1197000" />
       <workItem from="1427454787977" duration="1421000" />
-      <workItem from="1427457739064" duration="333000" />
+      <workItem from="1427457739064" duration="1690000" />
+      <workItem from="1427459998639" duration="1572000" />
+      <workItem from="1427464126201" duration="887000" />
+      <workItem from="1427695851055" duration="98000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72012000" />
+    <option name="totallyTimeSpent" value="75926000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -1016,8 +975,8 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32626426" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.51549757" sideWeight="0.7496218" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34094617" sideWeight="0.49546143" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46818924" sideWeight="0.7496218" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3442088" sideWeight="0.49546143" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27987897" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886535" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -1355,7 +1314,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="782">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1366,17 +1324,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/UploadServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="151" max-vertical-offset="612">
-          <caret line="28" column="20" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
-          <folding>
-            <element signature="e#501#502#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/lightcouch/lightcouch/0.1.6/lightcouch-0.1.6.jar!/org/lightcouch/CouchDbClient.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18518518" vertical-offset="0" max-vertical-offset="527">
@@ -1384,58 +1331,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseSetup.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Servlet/UploadServletTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7263582" vertical-offset="81" max-vertical-offset="578">
-          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7518248" vertical-offset="99" max-vertical-offset="1224">
+          <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/MiscServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="629">
-          <caret line="28" column="32" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="32" />
-          <folding />
+        <state vertical-scroll-proportion="0.53424656" vertical-offset="140" max-vertical-offset="629">
+          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="89" max-vertical-offset="833">
+          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/UploadServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseSetup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="65" max-vertical-offset="578">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Servlet/DeleteServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="663">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="765">
+          <caret line="26" column="15" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/Servlet/DeleteServletTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="112" max-vertical-offset="697">
-          <caret line="31" column="2" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Servlet/UploadServletTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Controller/DatabaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="304" max-vertical-offset="850">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Controller/DatabaseControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2267658" vertical-offset="690" max-vertical-offset="1275">
-          <caret line="70" column="3" selection-start-line="70" selection-start-column="3" selection-end-line="70" selection-end-column="3" />
-          <folding />
+        <state vertical-scroll-proportion="1.2986578" vertical-offset="208" max-vertical-offset="816">
+          <caret line="35" column="21" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

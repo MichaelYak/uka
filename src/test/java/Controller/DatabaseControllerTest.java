@@ -14,24 +14,13 @@ import static org.junit.Assert.*;
 
 public class DatabaseControllerTest {
 
-    public static final String TESTDB = "testdb";
+    public static final String TESTDB = "uka";
     private CouchDbClient dbClient;
     private DatabaseController databaseController;
 
     @Before
-    public void setupFreshDB() {
-        CouchDbProperties properties = new CouchDbProperties()
-                .setDbName(TESTDB)
-                .setCreateDbIfNotExist(true)
-                .setProtocol("https")
-                .setHost("couchdb40155-env-8900677.jelastic.elastx.net")
-                .setPort(443)
-                .setUsername("admin")
-                .setPassword("admin")
-                .setMaxConnections(100)
-                .setConnectionTimeout(0);
-        dbClient = new CouchDbClient(properties);
-
+    public void setUp() {
+        dbClient = getDbClient();
         databaseController = new DatabaseController();
     }
 
@@ -56,25 +45,33 @@ public class DatabaseControllerTest {
 */
     @Test
     public void removeFromDatabase(){
-        int countBefore = dbClient.view("_all_docs").query(DummyData.class).size();
-        System.out.println("CounterBefore : " + countBefore);
         Response r = databaseController.addToDatabase(new DummyData());
-
-        List<DummyData> allDocs = dbClient.view("_all_docs").includeDocs(true).query(DummyData.class);
-
-        System.out.println("AllDocs : " + allDocs.size());
-
+        int countBefore = dbClient.view("_all_docs").query(DummyData.class).size();
 
         databaseController.removeDocument(r.getId());
         int countAfter = dbClient.view("_all_docs").query(DummyData.class).size();
-System.out.println("CounterAfter : " + countAfter);
- //       assertTrue(countBefore == countAfter + 1);
+
+        assertTrue(countBefore == countAfter + 1);
     }
 
     @Test
     public void addDataToDatabase() {
         Response r = databaseController.addToDatabase(new DummyData());
+        System.out.println("Added id: " + r.getId());
         assertTrue(r.getId().length() > 0);
     }
 
+    private CouchDbClient getDbClient() {
+        CouchDbProperties properties = new CouchDbProperties()
+                .setDbName(TESTDB)
+                .setCreateDbIfNotExist(true)
+                .setProtocol("https")
+                .setHost("couchdb40212-uka2015.jelastic.elastx.net")
+                .setPort(443)
+                .setUsername("admin")
+                .setPassword("FNHadm88693")
+                .setMaxConnections(100)
+                .setConnectionTimeout(0);
+        return dbClient = new CouchDbClient(properties);
+    }
 }

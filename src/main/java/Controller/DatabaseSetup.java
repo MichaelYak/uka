@@ -17,11 +17,9 @@ public class DatabaseSetup {
         CouchDbProperties properties = new CouchDbProperties()
                 .setDbName(TESTDB)
                 .setCreateDbIfNotExist(true)
-                .setProtocol("https")
-                .setHost("couchdb40212-uka2015.jelastic.elastx.net")
-                .setPort(443)
-                .setUsername("admin")
-                .setPassword("FNHadm88693")
+                .setProtocol("http")
+                .setHost("localhost")
+                .setPort(5984)
                 .setMaxConnections(100)
                 .setConnectionTimeout(0);
         return dbClient = new CouchDbClient(properties);

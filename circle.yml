@@ -18,9 +18,10 @@ deployment:
 
       - docker login -e $kim.flaethe@accenture.com -u manlulu -p $DOCKER_PASS
       - docker push manlulu/circle
-      - ssh manlulu@littavdenjaffal.cloudapp.net "sudo docker pull manlulu/circle"
-      - ssh manlulu@littavdenjaffal.cloudapp.net "sudo docker pull manlulu/couchdb"
-      - ssh manlulu@littavdenjaffal.cloudapp.net "sudo docker rm -f app"
-      - ssh manlulu@littavdenjaffal.cloudapp.net "sudo docker rm -f db"
-      - ssh manlulu@littavdenjaffal.cloudapp.net "sudo docker run -d -p 80:8080 -p 5984:5984 --name app manlulu/circle"
-      - ssh manlulu@littavdenjaffal.cloudapp.net "sudo docker run -d -p 5984:5984 --name db --net='container:app' manlulu/couchdb"
+      - ssh kim@
+      - ssh kim@lol1.cloudapp.net "sudo docker pull manlulu/circle"
+      - ssh kim@lol1.cloudapp.net "sudo docker pull manlulu/couchdb"
+      - ssh kim@lol1.cloudapp.net "sudo docker rm -f app"
+      - ssh kim@lol1.cloudapp.net "sudo docker rm -f db"
+      - ssh kim@lol1.cloudapp.net "sudo docker run -d -p 80:8080 -p 5984:5984 --name app manlulu/circle"
+      - ssh kim@lol1.cloudapp.net "sudo docker run -d -p 5984:5984 --name db --net='container:app' manlulu/couchdb"

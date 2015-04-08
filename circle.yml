@@ -22,4 +22,4 @@ deployment:
       - ssh kim@lol1.cloudapp.net "sudo apt-add-repository ppa:ansible/ansible"
       - ssh kim@lol1.cloudapp.net "sudo apt-get update"
       - ssh kim@lol1.cloudapp.net "sudo apt-get install ansible"
-      - ssh kim@lol1.cloudapp.net "sudo ansible-playbook ansible-playbook"
+      - ssh kim@lol1.cloudapp.net "ansible-playbook ansible-playbook"

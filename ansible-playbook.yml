@@ -1,0 +1,23 @@
+---
+- hosts: dev
+  sudo: yes
+  tasks:
+  - name: Docker
+    docker:
+      name: app
+      image: manlulu/circle:latest
+      state: started
+      pull: always
+      ports:
+        - "8080:8080"
+        - "5984:5984"
+
+  - name: Database
+    docker:
+      name: db
+      image: manlulu/couchdb
+      state: started
+      pull: always
+      ports:
+        - "5984:5984"
+      net: "container:appContainer"

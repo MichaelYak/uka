@@ -7,6 +7,10 @@ dependencies:
   override:
   pre:
   - mvn clean install
+  - sudo apt-get install software-properties-common
+  - sudo apt-add-repository ppa:ansible/ansible
+  - sudo apt-get update
+  - sudo apt-get -y install ansible
   post:
   - docker build -t manlulu/circle .
 
@@ -18,8 +22,4 @@ deployment:
 
       - docker login -e $kim.flaethe@accenture.com -u manlulu -p $DOCKER_PASS
       - docker push manlulu/circle
-      - ssh kim@lol1.cloudapp.net "sudo apt-get install software-properties-common"
-      - ssh kim@lol1.cloudapp.net "sudo apt-add-repository ppa:ansible/ansible"
-      - ssh kim@lol1.cloudapp.net "sudo apt-get update"
-      - ssh kim@lol1.cloudapp.net "sudo apt-get -y install ansible"
-      - ssh kim@lol1.cloudapp.net "ansible-playbook ansible-playbook"
+      - ansible-playbook ansible-playbook

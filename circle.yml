@@ -18,7 +18,6 @@ deployment:
 
       - docker login -e $kim.flaethe@accenture.com -u manlulu -p $DOCKER_PASS
       - docker push manlulu/circle
-      - ssh kim@
       - ssh kim@lol1.cloudapp.net "sudo docker pull manlulu/circle"
       - ssh kim@lol1.cloudapp.net "sudo docker pull manlulu/couchdb"
       - ssh kim@lol1.cloudapp.net "sudo docker rm -f app"

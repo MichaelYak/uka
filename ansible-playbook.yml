@@ -5,7 +5,7 @@
   - name: Docker
     docker:
       name: app
-      image: manlulu/circle:latest
+      image: mikhailyak/circle:latest
       state: started
       pull: always
       ports:
@@ -15,7 +15,7 @@
   - name: Database
     docker:
       name: db
-      image: manlulu/couchdb
+      image: cozy/couchdb
       state: started
       pull: always
       ports:

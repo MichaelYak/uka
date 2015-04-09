@@ -12,7 +12,7 @@ dependencies:
   - sudo apt-get update
   - sudo apt-get -y install ansible
   post:
-  - docker build -t manlulu/circle .
+  - docker build -t mikhailyak/circle .
 
 
 deployment:
@@ -20,6 +20,6 @@ deployment:
     branch: master
     commands:
 
-      - docker login -e $kim.flaethe@accenture.com -u manlulu -p $DOCKER_PASS
-      - docker push manlulu/circle
+      - docker login -e $yakubovichmikhail@gmail.com -u mikhailyak -p $DOCKER_PASS
+      - docker push mikhailyak/circle
       - ansible-playbook ansible-playbook
